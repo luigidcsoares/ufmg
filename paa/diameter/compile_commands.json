@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/luigi/dev/ufmg/paa",
+  "command": "/usr/bin/g++ -std=c++17 diameter.cpp -o diameter",
+  "file": "/home/luigi/dev/ufmg/paa/diameter.cpp"
+}
+]
