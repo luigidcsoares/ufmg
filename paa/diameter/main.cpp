@@ -1,6 +1,6 @@
+#include <experimental/optional>
 #include <iostream>
 #include <limits>
-#include <experimental/optional>
 #include <stack>
 #include <vector>
 
@@ -11,7 +11,7 @@ using namespace std;
 using Weight = uint16_t;
 using PathWeight = uint32_t;
 /// Value used to represent edges that do not exist in a graph.
-PathWeight inf = numeric_limits<uint32_t>::max();
+PathWeight Inf = numeric_limits<uint32_t>::max();
 /// Since we need to compute the shortest path for every pair of vertices in the
 /// graph, we shall use the Floyd-Warshall algorithm. Hence, we shall model a
 /// graph using an adjacency matrix.
@@ -25,7 +25,7 @@ struct Result {
     using Pred = experimental::optional<Vertex>;
     vector<vector<PathWeight>> D;
     vector<vector<Pred>> P;
-    Vertex u, v;
+    Vertex i, j;
     PathWeight diameter;
 };
 
@@ -34,7 +34,7 @@ struct Result {
 /// traditional Floyd-Warshall algorithm by producing a matrix P of predecessors
 /// that can be used to reconstruct the shortest path. An entry ij in the
 /// matrix P, i.e. P[i][j], corresponds to the predecessor of j in the shortest
-/// path from vertex i to vertex j. Furthermore, this function also determine
+/// path from vertex i to vertex j. Furthermore, this function also determines
 /// a pair of vertices called "diametral vertices", which are the edges of a
 /// shortest path that is the maximum between all shortest paths (i.e., the
 /// diameter of the graph).
@@ -57,11 +57,11 @@ Result *floydWarshall(const Graph &G) {
         for (size_t j = 0; j < n; j++) {
             // Assume that G is already filled with the correct weights.
             // In other words, given an edge ij, G[i][j] = 0 if i == j,
-            // inf if the edge does not exist, or w(i, j) otherwise.
+            // Inf if the edge does not exist, or w(i, j) otherwise.
             r->D[i][j] = G[i][j];
             // If i == j or if the edge ij does not exist, there is not
             // predecessor to be defined.
-            if (i == j || G[i][j] == inf)
+            if (i == j || G[i][j] == Inf)
                 r->P[i][j] = experimental::nullopt;
             else
                 r->P[i][j] = i;
@@ -104,12 +104,10 @@ Result *floydWarshall(const Graph &G) {
                 r->P[i][j] = r->P[k][j];
             }
 
-            // If the graph was not connected, we would need to add a test
-            // "r->D[i][j] != inf" to check if there is a path from i to j.
-            if (r->D[i][j] > r->diameter) {
+            if (r->D[i][j] != Inf && r->D[i][j] > r->diameter) {
                 r->diameter = r->D[i][j];
-                r->u = i;
-                r->v = j;
+                r->i = i;
+                r->j = j;
             }
         }
     }
@@ -122,18 +120,14 @@ Result *floydWarshall(const Graph &G) {
 ///
 /// \returns a stack of vertices that composes the shortest path. The top of
 /// the stack is the vertex "u", while the bottom is "v".
-stack<Vertex> reconstructPath(vector<vector<Result::Pred>> P, Vertex u,
-                                Vertex v) {
+stack<Vertex> reconstructPath(vector<vector<Result::Pred>> P, Vertex i,
+                              Vertex j) {
     stack<Vertex> S;
-    S.push(v);
+    S.push(j);
 
-    Vertex i = u;
-    Vertex k = v;
-
-    while (P[i][k]) {
-        Vertex j = P[i][k].value();
+    while (P[i][j]) {
+        j = P[i][j].value();
         S.push(j);
-        k = j;
     }
 
     return S;
@@ -148,7 +142,7 @@ int main() {
     // Initialize every entry with value <inf>, except for an edge (i, i),
     // which have weight 0.
     for (size_t i = 0; i < n; i++) {
-        G[i] = vector<Weight>(n, inf);
+        G[i] = vector<Weight>(n, Inf);
         G[i][i] = 0;
     }
 
@@ -164,18 +158,18 @@ int main() {
 
     Result *r = floydWarshall(G);
     cout << r->diameter << endl;
-    cout << r->u + 1 << " " << r->v + 1 << endl;
+    cout << r->i + 1 << " " << r->j + 1 << endl;
 
-    stack<Vertex> S = reconstructPath(r->P, r->u, r->v);
+    stack<Vertex> S = reconstructPath(r->P, r->i, r->j);
     cout << S.size() << endl;
 
-    Vertex v = S.top();
+    Vertex i = S.top();
     S.pop();
-    cout << v + 1;
+    cout << i + 1;
     while (!S.empty()) {
-        Vertex v = S.top();
+        i = S.top();
         S.pop();
-        cout << " " << v + 1;
+        cout << " " << i + 1;
     }
 
     cout << endl;
