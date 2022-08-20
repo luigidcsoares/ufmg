@@ -1,0 +1,98 @@
+
+
+
+#+title: Variáveis e Tipos
+
+
+
+#+author: Luigi D. C. Soares
+#+email: <luigi.domenico@dcc.ufmg.br>
+
+#+subtitle: Progamação e Desenvolvimento de Software I
+
+#+date: DCC/UFMG (25/08/2022)
+
+#+startup: latexpreview
+#+options: H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+options: TeX:t LaTeX:t skip:nil d:nil todo:t pri:nil tags:not-in-toc
+#+latex_class: beamer
+#+latex_class_options: [t, aspectratio=169]
+#+latex_header: \usepackage{tikz}
+#+latex_header: \usepackage{booktabs}
+#+beamer_header: \title[Variáveis e Tipos]{Variáveis e Tipos}
+#+beamer_header: \subtitle{Programação e Desenvolvimento de Software I}
+#+beamer_header: \author[\tiny\{gleison.mendonca, luigi.domenico\}@dcc.ufmg.br]{%
+#+beamer_header: Gleison S. D. Mendonça, Luigi D. C. Soares\texorpdfstring{\\}{}
+#+beamer_header: \texttt{\{gleison.mendonca, luigi.domenico\}@dcc.ufmg.br}}
+#+beamer_header: \institute[DCC/UFMG]{}
+#+beamer_header: \date[25/08/2022]{}
+#+beamer_header: %\usetheme{saori}
+#+beamer_header: %\usemintedstyle{native}
+#+beamer_header: \usetheme{ufmg}
+
+* Variáveis
+
+- Na matemática
+  - É uma entidade capaz de representar um valor ou expressão
+  - Pode representar um número ou um conjunto de números
+  - \(f(x) = x²\)
+
+* Variáveis
+
+- Na matemática
+  - É uma entidade capaz de representar um valor ou expressão
+  - Pode representar um número ou um conjunto de números
+  - \(f(x) = x²\)
+
+- Na computação
+  - Posição de memória que armazena uma informação
+  - Pode ser modificada pelo programa
+
+* Memória
+
+- =int x = 10;=
+- =double y = 2.5;=
+
+#+attr_latex: :booktabs t :align ccc
+| *Nome* | *Valor* | *Endereço* |
+|------+-------+----------|
+|      |       |        0 |
+| x    |    10 |        4 |
+| y    |   2.5 |        8 |
+|      |       |       12 |
+|      |       |       16 |
+
+* Variáveis
+
+- Nome
+  - Pode ter um ou mais caracteres
+  - Nem tudo pode ser usado como nome
+
+* Variáveis
+
+- Nome
+  - Pode ter um ou mais caracteres
+  - Nem tudo pode ser usado como nome
+
+- Tipo
+  - Conjunto de valores aceitos
+
+* Variáveis
+
+- Nome
+  - Pode ter um ou mais caracteres
+  - Nem tudo pode ser usado como nome
+
+- Tipo
+  - Conjunto de valores aceitos
+
+- Escopo
+  - Global ou local
+
+* Variáveis
+
+- Nome
+  - Deve iniciar com letras ou underscore (_)
+  - Caracteres devem ser letras, números ou underscores
+  - Palavras chaves não podem ser usadas nomes
+  - Letras maiúsculas e minúsculas são consideradas diferentes

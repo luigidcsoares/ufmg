@@ -1,0 +1,142 @@
+# Let author empty because for some reason these infos get exported
+# _after_ all latex_headers, so we cannot use them (or can we?)
+#+author:
+#+options: toc:nil
+#+language: pt
+#+latex_class: article
+#+latex_class_options: [a4paper, 11pt]
+# ==========================================================
+# ======================= Packages =========================
+# ==========================================================
+#+latex_header: \usepackage[brazil]{babel}
+#+latex_header: \usepackage[utf8]{inputenc}
+#+latex_header: \usepackage{fancyhdr}
+#+latex_header: \usepackage[margin=1.2in]{geometry}
+#+latex_header: \usepackage[table]{xcolor}
+#+latex_header: \usepackage{booktabs}
+#+latex_header: \usepackage{array}
+#+latex_header: \usepackage{enumitem}
+#+latex_header: \usepackage{xcolor}
+#+latex_header: \usepackage{datetime2}
+# ==========================================================
+# ========================== Info ==========================
+# ==========================================================
+#+latex_header: \makeatletter
+#+latex_header: \DeclareRobustCommand*\course[1]{\gdef\@course{#1}}
+#+latex_header: \DeclareRobustCommand*\institution[1]{\gdef\@institution{#1}}
+#+latex_header: \DeclareRobustCommand*\semester[1]{\gdef\@semester{#1}}
+#+latex_header: \title{Plano de Ensino / Cronograma}
+#+latex_header: \author{Prof. Luigi Domenico Cecchini Soares}
+#+latex_header: \course{Programação de Computadores}
+#+latex_header: \institution{DCC / ICEx / UFMG}
+#+latex_header: \semester{2022.2}
+#+latex_header: \let\thetitle\@title{}
+#+latex_header: \let\theauthor\@author{}
+#+latex_header: \let\thecourse\@course{}
+#+latex_header: \let\theinstitution\@institution{}
+#+latex_header: \let\thesemester\@semester{}
+#+latex_header: \let\thedate\@date{}
+#+latex_header: \makeatother
+#+latex_header: \DTMnewdatestyle{brDateStyle}{%
+#+latex_header:     \renewcommand{\DTMdisplaydate}[4]{##3/##2/##1}%
+#+latex_header:     \renewcommand{\DTMDisplaydate}{\DTMdisplaydate}}
+#+latex_header: \DTMsetdatestyle{brDateStyle}
+# ==========================================================
+# ======================= Page Style =======================
+# ==========================================================
+#+latex_header: \pagestyle{fancy}
+#+latex_header: \fancyhf{}
+#+latex_header: \setlength{\headheight}{15pt}
+#+latex_header: \lhead{\theauthor \\ \thecourse}
+#+latex_header: \rhead{\theinstitution \\ \thesemester}
+#+latex_header: \rfoot{\thepage}
+#+latex_header: \hypersetup{
+#+latex_header:     colorlinks,
+#+latex_header:     linkcolor={red!50!black},
+#+latex_header:     citecolor={blue!50!black},
+#+latex_header:     urlcolor={blue!80!black}
+#+latex_header: }
+
+# ==========================================================
+# ========================= Title ==========================
+# ==========================================================
+\begin{center}
+\Large\bfseries\thetitle
+\end{center}
+
+* Informações Gerais
+
+\setlist{leftmargin=1.5em, itemsep=0em}
+- Código da disciplina: :: DCC001 / DCC208
+- Semestre: :: 2022.2
+- Professor: :: Luigi Domenico Cecchini Soares
+- Contato: :: [[mailto:luigi.domenico@dcc.ufmg.br][luigi.domenico@dcc.ufmg.br]] (Adicionar [PC] no assunto)
+- Horários: :: 3a 19:00 -- 20:40, 5a 20:55 -- 22:35
+- Salas: :: (a definir)
+
+* Ementa
+Metodologia de desenvolvimento de programas. Programação em Linguagem de
+Alto Nível. Comandos Básicos. Estruturas de dados. Modularização. Bibliotecas
+científicas.
+
+* Avaliação
+
+- Avaliações (4 x 25 pontos): 75 pontos (serão consideradas as 3 maiores notas)
+- Atividades práticas (VPLs): 15 pontos
+- Projeto final: 10 pontos
+
+* Bibliografia
+
+- MENEZES, Nilo Ney Coutinho. Introdução à programação com Python–2ª edição:
+  Algoritmos e lógica de programação para iniciantes. Novatec Editora, 2016
+- SEVERANCE, Charles. Python for informatics: Exploring information .
+  CreateSpace, 2013. (disponível gratuitamente em http://www.pythonlearn.com/book.php)
+- MCKINNEY, Wes. Python for data analysis: Data wrangling with Pandas, NumPy,
+  and IPython. " O'Reilly Media, Inc.", 2012.
+
+* Cronograma (\color{red}\bfseries Última atualização: \today)
+
+#+latex: \fcolorbox{black}{green!25}{\rule{0pt}{6pt}\rule{6pt}{0pt}}\quad Não há aula \qquad
+#+latex: \fcolorbox{black}{gray!25}{\rule{0pt}{6pt}\rule{6pt}{0pt}}\quad Sala de Aula \qquad
+#+latex: \fcolorbox{black}{yellow!25}{\rule{0pt}{6pt}\rule{6pt}{0pt}}\quad Laboratório \qquad
+#+latex: \fcolorbox{black}{red!15}{\rule{0pt}{6pt}\rule{6pt}{0pt}}\quad Avaliação
+
+#+attr_latex: :environment longtable :booktabs t :align >{\bfseries}ccp{7cm}lc
+| *Aula*                    | *Data*  | *Conteúdo*                                                                        | *Observações*            | *Ref.* |
+|-------------------------+-------+---------------------------------------------------------------------------------+------------------------+------|
+| \rowcolor{green!25}     | 23/08 | Não haverá aula: Recepção calouros                                              |                        |      |
+| \rowcolor{yellow!25} 01 | 25/08 | Objetivos, motivação da disciplina, conceitos básicos e ambiente de programação | Apresentação           |      |
+| \rowcolor{gray!25} 02   | 30/08 | Variáveis, atribuições e operações aritméticas                                  | Tópico 1 / Expositiva  |      |
+| \rowcolor{yellow!25} 03 | 01/09 | Variáveis, atribuições e operações aritméticas                                  | Tópico 1 / Prática     |      |
+| \rowcolor{gray!25} 04   | 06/09 | Comandos condicionais                                                           | Tópico 2 / Expositiva  |      |
+| \rowcolor{yellow!25} 05 | 08/09 | Comandos condicionais                                                           | Tópico 2 / Prática     |      |
+| \rowcolor{gray!25} 06   | 13/09 | Revisão - Tópicos 1 e 2                                                         |                        |      |
+| \rowcolor{red!15} 07    | 15/09 | *Avaliação 01 - Tópicos 1 e 2*                                                    |                        |      |
+| \rowcolor{gray!25} 08   | 20/09 | Comandos de repetição                                                           | Tópico 3 / Expositiva  |      |
+| \rowcolor{yellow!25} 09 | 22/09 | Comandos de repetição                                                           | Tópico 3 / Prática     |      |
+| \rowcolor{gray!25} 10   | 27/09 | Funções                                                                         | Tópico 4 / Expositiva  |      |
+| \rowcolor{yellow!25} 11 | 29/09 | Funções                                                                         | Tópico 4 / Prática     |      |
+| \rowcolor{gray!25} 12   | 04/10 | Revisão - Tópicos 3 e 4                                                         |                        |      |
+| \rowcolor{red!15} 13    | 06/10 | *Avaliação 02 - Tópicos 3 e 4*                                                    |                        |      |
+| \rowcolor{gray!25} 14   | 11/10 | Manipulação de strings                                                          | Tópico 5 / Expositiva  |      |
+| \rowcolor{yellow!25} 15 | 13/10 | Manipulação de strings                                                          | Tópico 5 / Prática     |      |
+| \rowcolor{gray!25} 16   | 18/10 | Listas                                                                          | Tópico 6 / Expositiva  |      |
+| \rowcolor{yellow!25} 17 | 20/10 | Listas                                                                          | Tópico 6 / Prática     |      |
+| \rowcolor{gray!25} 18   | 25/10 | Revisão - Tópicos 5 e 6                                                         |                        |      |
+| \rowcolor{red!15} 19    | 27/10 | *Avaliação 03 - Tópicos 5 e 6*                                                    |                        |      |
+| \rowcolor{gray!25} 20   | 01/11 | Arquivos                                                                        | Tópico 7 / Expositiva  |      |
+| \rowcolor{yellow!25} 21 | 03/11 | Arquivos                                                                        | Tópico 7 / Prática     |      |
+| \rowcolor{gray!25} 22   | 08/11 | Dicionários e Tuplas                                                            | Tópico 8 / Expositiva  |      |
+| \rowcolor{yellow!25} 23 | 10/11 | Dicionários e Tuplas                                                            | Tópico 8 / Prática     |      |
+| \rowcolor{green!25}     | 15/11 | Feriado: Proclamação da República                                               |                        |      |
+| \rowcolor{red!15}  24   | 17/11 | *Avaliação 04 - Tópicos 7 e 8*                                                    |                        |      |
+| \rowcolor{gray!25} 25   | 22/11 | Recursão                                                                        | Tópico 9 / Expositiva  |      |
+| \rowcolor{yellow!25} 26 | 24/11 | Recursão                                                                        | Tópica 9 / Prática     |      |
+| \rowcolor{gray!25} 27   | 29/12 | Bibliotecas científicas - Matplotlib                                            | Tópico 10 / Expositiva |      |
+| \rowcolor{gray!25} 28   | 01/12 | Bibliotecas científicas - Numpy                                                 | Tópico 10 / Expositiva |      |
+| \rowcolor{yellow!25} 29 | 06/12 | Bibliotecas científicas                                                         | Tópico 10 / Prática    |      |
+| \rowcolor{green!25}     | 08/12 | Feriado: Nossa Senhora da Conceição                                             |                        |      |
+| \rowcolor{green!25}     | 13/12 | Não haverá aula: Semifinal da Copa                                              | Tópico 10 / Prática    |      |
+| \rowcolor{yellow!25} 30 | 15/12 | Bibliotecas científicas - *Projeto Final*                                         | Entrega no Moodle      |      |
+|                         |       |                                                                                 |                        |      |
+|                         |       | *Exame especial*                                                                  |                        |      |

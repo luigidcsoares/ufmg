@@ -1,0 +1,92 @@
+% Created 2022-08-18 qui 09:30
+% Intended LaTeX compiler: pdflatex
+\documentclass[t, aspectratio=169]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage[newfloat]{minted}
+\usepackage{tikz}
+\usepackage{booktabs}
+\usetheme{default}
+\author{Luigi D. C. Soares}
+\date{DCC/UFMG (25/08/2022)}
+\title{Variáveis e Tipos}
+\subtitle{Progamação e Desenvolvimento de Software I}
+\title[Variáveis e Tipos]{Variáveis e Tipos}
+\subtitle{Programação e Desenvolvimento de Software I}
+\author[\tiny\{gleison.mendonca, luigi.domenico\}@dcc.ufmg.br]{%
+Gleison S. D. Mendonça, Luigi D. C. Soares\texorpdfstring{\\}{}
+\texttt{\{gleison.mendonca, luigi.domenico\}@dcc.ufmg.br}}
+\institute[DCC/UFMG]{}
+\date[25/08/2022]{}
+%\usetheme{saori}
+%\usemintedstyle{native}
+\usetheme{ufmg}
+\hypersetup{
+ pdfauthor={Luigi D. C. Soares},
+ pdftitle={Variáveis e Tipos},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 28.1 (Org mode 9.6)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+
+\begin{frame}[label={sec:org8463d7a}]{Variáveis}
+\begin{itemize}
+\item Na matemática
+\begin{itemize}
+\item É uma entidade capaz de representar um valor ou expressão
+\item Pode representar um número ou um conjunto de números
+\item \(f(x) = x²\)
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}[label={sec:org4ab6ca1}]{Variáveis}
+\begin{itemize}
+\item Na matemática
+\begin{itemize}
+\item É uma entidade capaz de representar um valor ou expressão
+\item Pode representar um número ou um conjunto de números
+\item \(f(x) = x²\)
+\end{itemize}
+
+\item Na computação
+\begin{itemize}
+\item Posição de memória que armazena uma informação
+\item Pode ser modificada pelo programa
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}[label={sec:org8298b02},fragile]{Memória}
+ \begin{itemize}
+\item \texttt{int x = 10;}
+\item \texttt{double y = 2.5;}
+\end{itemize}
+
+\begin{center}
+\begin{tabular}{ccc}
+\toprule
+Nome & \alert{Valor} & \alert{Endereço}\\
+\midrule
+ &  & 0\\
+x & 10 & 4\\
+y & 2.5 & 8\\
+ &  & 12\\
+ &  & 16\\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{frame}
+\end{document}
