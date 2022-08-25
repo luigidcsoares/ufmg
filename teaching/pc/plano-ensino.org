@@ -72,7 +72,7 @@
 - Professor: :: Luigi Domenico Cecchini Soares
 - Contato: :: [[mailto:luigi.domenico@dcc.ufmg.br][luigi.domenico@dcc.ufmg.br]] (Adicionar [PC] no assunto)
 - Horários: :: 3a 19:00 -- 20:40, 5a 20:55 -- 22:35
-- Salas: :: (a definir)
+- Salas: :: CAD 3 - Sala 312 / LAICO
 
 * Ementa
 Metodologia de desenvolvimento de programas. Programação em Linguagem de
@@ -87,12 +87,12 @@ científicas.
 
 * Bibliografia
 
-- MENEZES, Nilo Ney Coutinho. Introdução à programação com Python–2ª edição:
-  Algoritmos e lógica de programação para iniciantes. Novatec Editora, 2016
 - SEVERANCE, Charles. Python for informatics: Exploring information .
-  CreateSpace, 2013. (disponível gratuitamente em http://www.pythonlearn.com/book.php)
+  CreateSpace, 2013. (disponível gratuitamente em http://www.pythonlearn.com/book.php) *[C]*
+- MENEZES, Nilo Ney Coutinho. Introdução à programação com Python–2ª edição:
+  Algoritmos e lógica de programação para iniciantes. Novatec Editora, 2016 *[N]*
 - MCKINNEY, Wes. Python for data analysis: Data wrangling with Pandas, NumPy,
-  and IPython. " O'Reilly Media, Inc.", 2012.
+  and IPython. " O'Reilly Media, Inc.", 2012. *[W]*
 
 * Cronograma (\color{red}\bfseries Última atualização: \today)
 
@@ -102,41 +102,41 @@ científicas.
 #+latex: \fcolorbox{black}{red!15}{\rule{0pt}{6pt}\rule{6pt}{0pt}}\quad Avaliação
 
 #+attr_latex: :environment longtable :booktabs t :align >{\bfseries}ccp{7cm}lc
-| *Aula*                    | *Data*  | *Conteúdo*                                                                        | *Observações*            | *Ref.* |
-|-------------------------+-------+---------------------------------------------------------------------------------+------------------------+------|
-| \rowcolor{green!25}     | 23/08 | Não haverá aula: Recepção calouros                                              |                        |      |
-| \rowcolor{yellow!25} 01 | 25/08 | Objetivos, motivação da disciplina, conceitos básicos e ambiente de programação | Apresentação           |      |
-| \rowcolor{gray!25} 02   | 30/08 | Variáveis, atribuições e operações aritméticas                                  | Tópico 1 / Expositiva  |      |
-| \rowcolor{yellow!25} 03 | 01/09 | Variáveis, atribuições e operações aritméticas                                  | Tópico 1 / Prática     |      |
-| \rowcolor{gray!25} 04   | 06/09 | Comandos condicionais                                                           | Tópico 2 / Expositiva  |      |
-| \rowcolor{yellow!25} 05 | 08/09 | Comandos condicionais                                                           | Tópico 2 / Prática     |      |
-| \rowcolor{gray!25} 06   | 13/09 | Revisão - Tópicos 1 e 2                                                         |                        |      |
-| \rowcolor{red!15} 07    | 15/09 | *Avaliação 01 - Tópicos 1 e 2*                                                    |                        |      |
-| \rowcolor{gray!25} 08   | 20/09 | Comandos de repetição                                                           | Tópico 3 / Expositiva  |      |
-| \rowcolor{yellow!25} 09 | 22/09 | Comandos de repetição                                                           | Tópico 3 / Prática     |      |
-| \rowcolor{gray!25} 10   | 27/09 | Funções                                                                         | Tópico 4 / Expositiva  |      |
-| \rowcolor{yellow!25} 11 | 29/09 | Funções                                                                         | Tópico 4 / Prática     |      |
-| \rowcolor{gray!25} 12   | 04/10 | Revisão - Tópicos 3 e 4                                                         |                        |      |
-| \rowcolor{red!15} 13    | 06/10 | *Avaliação 02 - Tópicos 3 e 4*                                                    |                        |      |
-| \rowcolor{gray!25} 14   | 11/10 | Manipulação de strings                                                          | Tópico 5 / Expositiva  |      |
-| \rowcolor{yellow!25} 15 | 13/10 | Manipulação de strings                                                          | Tópico 5 / Prática     |      |
-| \rowcolor{gray!25} 16   | 18/10 | Listas                                                                          | Tópico 6 / Expositiva  |      |
-| \rowcolor{yellow!25} 17 | 20/10 | Listas                                                                          | Tópico 6 / Prática     |      |
-| \rowcolor{gray!25} 18   | 25/10 | Revisão - Tópicos 5 e 6                                                         |                        |      |
-| \rowcolor{red!15} 19    | 27/10 | *Avaliação 03 - Tópicos 5 e 6*                                                    |                        |      |
-| \rowcolor{gray!25} 20   | 01/11 | Arquivos                                                                        | Tópico 7 / Expositiva  |      |
-| \rowcolor{yellow!25} 21 | 03/11 | Arquivos                                                                        | Tópico 7 / Prática     |      |
-| \rowcolor{gray!25} 22   | 08/11 | Dicionários e Tuplas                                                            | Tópico 8 / Expositiva  |      |
-| \rowcolor{yellow!25} 23 | 10/11 | Dicionários e Tuplas                                                            | Tópico 8 / Prática     |      |
-| \rowcolor{green!25}     | 15/11 | Feriado: Proclamação da República                                               |                        |      |
-| \rowcolor{red!15}  24   | 17/11 | *Avaliação 04 - Tópicos 7 e 8*                                                    |                        |      |
-| \rowcolor{gray!25} 25   | 22/11 | Recursão                                                                        | Tópico 9 / Expositiva  |      |
-| \rowcolor{yellow!25} 26 | 24/11 | Recursão                                                                        | Tópica 9 / Prática     |      |
-| \rowcolor{gray!25} 27   | 29/12 | Bibliotecas científicas - Matplotlib                                            | Tópico 10 / Expositiva |      |
-| \rowcolor{gray!25} 28   | 01/12 | Bibliotecas científicas - Numpy                                                 | Tópico 10 / Expositiva |      |
-| \rowcolor{yellow!25} 29 | 06/12 | Bibliotecas científicas                                                         | Tópico 10 / Prática    |      |
-| \rowcolor{green!25}     | 08/12 | Feriado: Nossa Senhora da Conceição                                             |                        |      |
-| \rowcolor{green!25}     | 13/12 | Não haverá aula: Semifinal da Copa                                              | Tópico 10 / Prática    |      |
-| \rowcolor{yellow!25} 30 | 15/12 | Bibliotecas científicas - *Projeto Final*                                         | Entrega no Moodle      |      |
-|                         |       |                                                                                 |                        |      |
-|                         |       | *Exame especial*                                                                  |                        |      |
+| *Aula*                    | *Data*  | *Conteúdo*                                                                        | *Observações*            | *Ref.*      |
+|-------------------------+-------+---------------------------------------------------------------------------------+------------------------+-----------|
+| \rowcolor{green!25}     | 23/08 | Não haverá aula: Recepção calouros                                              |                        |           |
+| \rowcolor{yellow!25} 01 | 25/08 | Objetivos, motivação da disciplina, conceitos básicos e ambiente de programação | Apresentação           |           |
+| \rowcolor{gray!25} 02   | 30/08 | Variáveis, atribuições e operações aritméticas                                  | Tópico 1 / Expositiva  | C.2       |
+| \rowcolor{yellow!25} 03 | 01/09 | Variáveis, atribuições e operações aritméticas                                  | Tópico 1 / Prática     | C.2       |
+| \rowcolor{gray!25} 04   | 06/09 | Comandos condicionais                                                           | Tópico 2 / Expositiva  | C.3       |
+| \rowcolor{yellow!25} 05 | 08/09 | Comandos condicionais                                                           | Tópico 2 / Prática     | C.3       |
+| \rowcolor{gray!25} 06   | 13/09 | Revisão - Tópicos 1 e 2                                                         |                        |           |
+| \rowcolor{red!15} 07    | 15/09 | *Avaliação 01 - Tópicos 1 e 2*                                                    |                        |           |
+| \rowcolor{gray!25} 08   | 20/09 | Comandos de repetição                                                           | Tópico 3 / Expositiva  | C.5       |
+| \rowcolor{yellow!25} 09 | 22/09 | Comandos de repetição                                                           | Tópico 3 / Prática     | C.5       |
+| \rowcolor{gray!25} 10   | 27/09 | Funções                                                                         | Tópico 4 / Expositiva  | C.4       |
+| \rowcolor{yellow!25} 11 | 29/09 | Funções                                                                         | Tópico 4 / Prática     | C.4       |
+| \rowcolor{gray!25} 12   | 04/10 | Revisão - Tópicos 3 e 4                                                         |                        |           |
+| \rowcolor{red!15} 13    | 06/10 | *Avaliação 02 - Tópicos 3 e 4*                                                    |                        |           |
+| \rowcolor{gray!25} 14   | 11/10 | Manipulação de strings                                                          | Tópico 5 / Expositiva  | C.6       |
+| \rowcolor{yellow!25} 15 | 13/10 | Manipulação de strings                                                          | Tópico 5 / Prática     | C.6       |
+| \rowcolor{gray!25} 16   | 18/10 | Listas                                                                          | Tópico 6 / Expositiva  | C.8       |
+| \rowcolor{yellow!25} 17 | 20/10 | Listas                                                                          | Tópico 6 / Prática     | C.8       |
+| \rowcolor{gray!25} 18   | 25/10 | Revisão - Tópicos 5 e 6                                                         |                        |           |
+| \rowcolor{red!15} 19    | 27/10 | *Avaliação 03 - Tópicos 5 e 6*                                                    |                        |           |
+| \rowcolor{gray!25} 20   | 01/11 | Arquivos                                                                        | Tópico 7 / Expositiva  | C.7       |
+| \rowcolor{yellow!25} 21 | 03/11 | Arquivos                                                                        | Tópico 7 / Prática     | C.7       |
+| \rowcolor{gray!25} 22   | 08/11 | Dicionários e Tuplas                                                            | Tópico 8 / Expositiva  | C.9, C.10 |
+| \rowcolor{yellow!25} 23 | 10/11 | Dicionários e Tuplas                                                            | Tópico 8 / Prática     | C.9, C.10 |
+| \rowcolor{green!25}     | 15/11 | Feriado: Proclamação da República                                               |                        |           |
+| \rowcolor{red!15}  24   | 17/11 | *Avaliação 04 - Tópicos 7 e 8*                                                    |                        |           |
+| \rowcolor{gray!25} 25   | 22/11 | Recursão                                                                        | Tópico 9 / Expositiva  | N.8.2     |
+| \rowcolor{yellow!25} 26 | 24/11 | Recursão                                                                        | Tópica 9 / Prática     | N.8.2     |
+| \rowcolor{gray!25} 27   | 29/12 | Bibliotecas científicas - Matplotlib                                            | Tópico 10 / Expositiva | W         |
+| \rowcolor{gray!25} 28   | 01/12 | Bibliotecas científicas - Numpy                                                 | Tópico 10 / Expositiva | W         |
+| \rowcolor{yellow!25} 29 | 06/12 | Bibliotecas científicas                                                         | Tópico 10 / Prática    | W         |
+| \rowcolor{green!25}     | 08/12 | Feriado: Nossa Senhora da Conceição                                             |                        |           |
+| \rowcolor{green!25}     | 13/12 | Não haverá aula: Semifinal da Copa                                              |                        |           |
+| \rowcolor{yellow!25} 30 | 15/12 | Bibliotecas científicas - *Projeto Final*                                         | Entrega no Moodle      | W         |
+|                         |       |                                                                                 |                        |           |
+| \rowcolor{red!15}       |       | *Exame especial*                                                                  |                        |           |

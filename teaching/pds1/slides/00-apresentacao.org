@@ -12,11 +12,12 @@
 
 #+date: DCC/UFMG (25/08/2022)
 
-#+startup: latexpreview
+#+startup: beamer latexpreview
 #+options: H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
 #+options: TeX:t LaTeX:t skip:nil d:nil todo:t pri:nil tags:not-in-toc
 #+latex_class: beamer
 #+latex_class_options: [t, aspectratio=169]
+#+latex_header: \usepackage{tikz}
 #+beamer_header: \title[Apresentação do Curso]{Apresentação do Curso}
 #+beamer_header: \subtitle{Programação e Desenvolvimento de Software I}
 #+beamer_header: \author[\tiny\{gleison.mendonca, luigi.domenico\}@dcc.ufmg.br]{%
@@ -49,6 +50,7 @@
   - Noções da organização e funcionamento de um computador
   - Noções de linguagens imperativas (vamos utilizar a linguagem C)
   - Noções de estruturas de dados
+
 * Por quê aprender programação?
 
 - Diversas áreas se beneficiam de programação
@@ -144,7 +146,6 @@
 
 - Terá lista de presença toda aula
 - Presença não é obrigatória, só venha se quiser
-  - Já sabe a matéria? prefere estudar em casa? Sem problemas
 
 - Se nota >= 60, aprovado!
 - Se nota < 60 e for infrequente (frequência < 75%)

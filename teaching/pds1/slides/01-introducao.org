@@ -12,7 +12,7 @@
 
 #+date: DCC/UFMG (25/08/2022)
 
-#+startup: latexpreview
+#+startup: beamer latexpreview
 #+options: H:1 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
 #+options: TeX:t LaTeX:t skip:nil d:nil todo:t pri:nil tags:not-in-toc
 #+latex_class: beamer
@@ -86,7 +86,7 @@
 * Primeiro programa em C
 
 #+attr_latex: :options frame=lines,framesep=2mm,linenos
-#+begin_src C :exports code :results verbatim
+#+begin_src C :exports code :results output
 #include <stdio.h> // Inclusão do módulo de entrada/saída
 
 // Ponto de entrada do programa
@@ -99,7 +99,7 @@ int main(int argc, char *argv[]) {
 * Primeiro programa em C
 
 #+attr_latex: :options frame=lines,framesep=2mm,linenos
-#+begin_src C :exports code :results verbatim
+#+begin_src C :exports code :results output
 #include <stdio.h> // Inclusão do módulo de entrada/saída
 
 // Ponto de entrada do programa
@@ -123,7 +123,7 @@ int main(int argc, char *argv[]) {
 - É importante!
 
 #+attr_latex: :options frame=lines,framesep=2mm,linenos
-#+begin_src C :exports code :results verbatim
+#+begin_src C :exports code :results output
 #include <stdio.h>
 int main(int argc, char *argv[]) { printf("Olá mundo\n"); return 0; }
 #+end_src
@@ -242,17 +242,20 @@ da divisão de *A* por *B.*
 * Implementando o algoritmo
 #+latex: \vspace{-2em}
 #+attr_latex: :options frame=lines,framesep=2mm,linenos
-#+begin_src C :exports code :results verbatim
+#+begin_src C :exports code :results output
 #include <stdio.h>
 int main(int argc, char *argv[]) {
+    int A = 7;
+    int B = 3;
     // TODO
+    return 0;
 }
 #+end_src
 
 * Implementando o algoritmo
 #+latex: \vspace{-2em}
 #+attr_latex: :options frame=lines,framesep=2mm,linenos
-#+begin_src C :exports code :results verbatim
+#+begin_src C :exports code :results output
 #include <stdio.h>
 int main(int argc, char *argv[]) {
     int a = 7;
@@ -274,8 +277,10 @@ int main(int argc, char *argv[]) {
 
 * Algoritmo vs Implementação
 
-- Note que o algoritmo (pseudo-código) que escrevemos anteriormente é mais alto nível, sem muitas regras
-- A implementação em alguma linguagem (nosso caso = C), por outro lado, obedece *regras de sintaxe*
+- Note que o algoritmo (pseudo-código) que escrevemos anteriormente é mais
+  flexível, sem muitas regras
+- A implementação em alguma linguagem (nosso caso = C), por outro lado, obedece
+  *regras de sintaxe*
 
 * Erro de Sintaxe
 
@@ -299,7 +304,7 @@ int main(int argc, char *argv[]) {
 - *Atenção!* Não basta obter um programa executável!! Será que ele está correto?
 - Considere o seguinte problema: determinar e exibir o valor de =y = seno(1,5)=
 #+attr_latex: :options frame=lines,framesep=2mm,linenos
-#+begin_src C :exports code :results verbatim
+#+begin_src C :exports code :results output
 #include <stdio.h>
 #include <math.h>
 
@@ -314,7 +319,7 @@ int main(int argc, char *argv[]) {
 - *Atenção!* Não basta obter um programa executável!! Será que ele está correto?
 - Considere o seguinte problema: determinar e exibir o valor de =y = seno(1,5)=
 #+attr_latex: :options frame=lines,framesep=2mm,linenos
-#+begin_src C :exports code :results verbatim
+#+begin_src C :exports code :results output
 #include <stdio.h>
 #include <math.h>
 
@@ -332,7 +337,7 @@ int main(int argc, char *argv[]) {
 
 - Se ao invés de =y = sin(1.5);= tivéssemos escrito =y = sin(2.5)=, o programa seria produzido e executaria normalmente
 #+attr_latex: :options frame=lines,framesep=2mm,linenos
-#+begin_src C :exports code :results verbatim
+#+begin_src C :exports code :results output
 #include <stdio.h>
 #include <math.h>
 
@@ -637,3 +642,10 @@ Programa\\Exec
 
 - Ambiente integrado: Code::Blocks (tutorial no Moodle)
 - Ambiente online: [[https://repl.it]]
+
+* Referências / Agradecimentos
+
+- Linguagem C completa e descomplicada, André Backes
+- Material adaptado:
+  - Prof. Fabrício Benevenuto (https://homepages.dcc.ufmg.br/~fabricio/)
+  - Prof. Pedro O. S. Vaz de Melo (https://homepages.dcc.ufmg.br/~olmo/)

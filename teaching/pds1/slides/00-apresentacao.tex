@@ -1,4 +1,4 @@
-% Created 2022-08-18 qui 20:39
+% Created 2022-08-25 qui 07:19
 % Intended LaTeX compiler: pdflatex
 \documentclass[t, aspectratio=169]{beamer}
 \usepackage[utf8]{inputenc}
@@ -13,6 +13,7 @@
 \usepackage{capt-of}
 \usepackage{hyperref}
 \usepackage[newfloat]{minted}
+\usepackage{tikz}
 \usetheme{default}
 \author{Luigi D. C. Soares}
 \date{DCC/UFMG (25/08/2022)}
@@ -39,13 +40,13 @@ Gleison S. D. Mendonça, Luigi D. C. Soares\texorpdfstring{\\}{}
 \maketitle
 
 
-\begin{frame}[label={sec:org9b1cefb}]{Objetivos}
+\begin{frame}[label={sec:orgfdcf03a}]{Objetivos}
 \begin{itemize}
 \item Introduzir o aluno aos conceitos de \alert{algoritmos} e \alert{estruturas de dados}
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org8567f7d}]{Objetivos}
+\begin{frame}[label={sec:org4172ff5}]{Objetivos}
 \begin{itemize}
 \item Introduzir o aluno aos conceitos de \alert{algoritmos} e \alert{estruturas de dados}
 \begin{itemize}
@@ -54,7 +55,7 @@ Gleison S. D. Mendonça, Luigi D. C. Soares\texorpdfstring{\\}{}
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org5b01a2f}]{Objetivos}
+\begin{frame}[label={sec:orgededcc9}]{Objetivos}
 \begin{itemize}
 \item Introduzir o aluno aos conceitos de \alert{algoritmos} e \alert{estruturas de dados}
 \begin{itemize}
@@ -64,7 +65,7 @@ Gleison S. D. Mendonça, Luigi D. C. Soares\texorpdfstring{\\}{}
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orgb93d7b4}]{Objetivos}
+\begin{frame}[label={sec:org2194848}]{Objetivos}
 \begin{itemize}
 \item Introduzir o aluno aos conceitos de \alert{algoritmos} e \alert{estruturas de dados}
 \begin{itemize}
@@ -74,13 +75,14 @@ Gleison S. D. Mendonça, Luigi D. C. Soares\texorpdfstring{\\}{}
 \end{itemize}
 \end{itemize}
 \end{frame}
-\begin{frame}[label={sec:orgc4a274b}]{Por quê aprender programação?}
+
+\begin{frame}[label={sec:org302879b}]{Por quê aprender programação?}
 \begin{itemize}
 \item Diversas áreas se beneficiam de programação
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org104785c}]{Por quê aprender programação?}
+\begin{frame}[label={sec:orgba4fdea}]{Por quê aprender programação?}
 \begin{itemize}
 \item Diversas áreas se beneficiam de programação
 \begin{itemize}
@@ -89,7 +91,7 @@ Gleison S. D. Mendonça, Luigi D. C. Soares\texorpdfstring{\\}{}
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org7183d81}]{Por quê aprender programação?}
+\begin{frame}[label={sec:orge217b59}]{Por quê aprender programação?}
 \begin{itemize}
 \item Diversas áreas se beneficiam de programação
 \begin{itemize}
@@ -99,7 +101,7 @@ Gleison S. D. Mendonça, Luigi D. C. Soares\texorpdfstring{\\}{}
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org65a1c3e}]{Por quê aprender programação?}
+\begin{frame}[label={sec:org4d55f85}]{Por quê aprender programação?}
 \begin{itemize}
 \item Diversas áreas se beneficiam de programação
 \begin{itemize}
@@ -110,7 +112,7 @@ Gleison S. D. Mendonça, Luigi D. C. Soares\texorpdfstring{\\}{}
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orgf048633}]{Por quê aprender programação?}
+\begin{frame}[label={sec:org593529c}]{Por quê aprender programação?}
 \begin{itemize}
 \item Diversas áreas se beneficiam de programação
 \begin{itemize}
@@ -122,7 +124,7 @@ Gleison S. D. Mendonça, Luigi D. C. Soares\texorpdfstring{\\}{}
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org88d78c5}]{Organização do curso - Avaliação}
+\begin{frame}[label={sec:org5e8ce5b}]{Organização do curso - Avaliação}
 \begin{itemize}
 \item Provas teóricas: 3 x 25 pontos
 \item Laboratório: 10 pontos
@@ -130,7 +132,7 @@ Gleison S. D. Mendonça, Luigi D. C. Soares\texorpdfstring{\\}{}
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org7d5bd11}]{Organização do curso - Aulas}
+\begin{frame}[label={sec:orgaaf569f}]{Organização do curso - Aulas}
 \begin{itemize}
 \item Aulas teóricas:
 \begin{itemize}
@@ -140,7 +142,7 @@ Gleison S. D. Mendonça, Luigi D. C. Soares\texorpdfstring{\\}{}
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orgf7006e2}]{Organização do curso - Aulas}
+\begin{frame}[label={sec:org6c6ab83}]{Organização do curso - Aulas}
 \begin{itemize}
 \item Aulas teóricas:
 \begin{itemize}
@@ -159,7 +161,7 @@ Gleison S. D. Mendonça, Luigi D. C. Soares\texorpdfstring{\\}{}
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org67cefd1}]{Organização do curso - Laboratórios}
+\begin{frame}[label={sec:org0a163d7}]{Organização do curso - Laboratórios}
 \begin{itemize}
 \item Laboratórios Virtuais de Programação (VPL)
 \begin{itemize}
@@ -170,7 +172,7 @@ Gleison S. D. Mendonça, Luigi D. C. Soares\texorpdfstring{\\}{}
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orgbb34984}]{Organização do curso - Trabalhos Práticos}
+\begin{frame}[label={sec:org6d47566}]{Organização do curso - Trabalhos Práticos}
 \begin{itemize}
 \item Individual
 \item Entrega no Moodle (VPL), correção automática com verificação de cópias
@@ -182,7 +184,7 @@ Gleison S. D. Mendonça, Luigi D. C. Soares\texorpdfstring{\\}{}
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org062a72d}]{Organização do curso - Provas}
+\begin{frame}[label={sec:org2eecaaf}]{Organização do curso - Provas}
 \begin{itemize}
 \item Conteúdo base: livro, slides, exercícios
 \item Faça todos os VPLs para praticar
@@ -196,7 +198,7 @@ Gleison S. D. Mendonça, Luigi D. C. Soares\texorpdfstring{\\}{}
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org17c5745}]{Bibliografia}
+\begin{frame}[label={sec:org6121370}]{Bibliografia}
 \begin{itemize}
 \item Livro-texto: Linguagem C completa e descomplicada, André Backes
 
@@ -211,13 +213,10 @@ dos Santos, Maia
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org211ac83}]{Notas e Frequência}
+\begin{frame}[label={sec:orgce48e31}]{Notas e Frequência}
 \begin{itemize}
 \item Terá lista de presença toda aula
 \item Presença não é obrigatória, só venha se quiser
-\begin{itemize}
-\item Já sabe a matéria? prefere estudar em casa? Sem problemas
-\end{itemize}
 
 \item Se nota >= 60, aprovado!
 \item Se nota < 60 e for infrequente (frequência < 75\%)
@@ -230,7 +229,7 @@ dos Santos, Maia
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orgc17f3d6}]{Dúvidas?}
+\begin{frame}[label={sec:org44fde7d}]{Dúvidas?}
 \begin{itemize}
 \item Fórum do Moodle (preferência)
 \item E-mail:
